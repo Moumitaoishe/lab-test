@@ -1,12 +1,10 @@
 <?php
 
-$total = $_POST['fisrt'] + $_POST['second'] + $_POST['third'] + $_POST['fourth'] + $_POST['fifth'] + $_POST['sixth'] + $_POST['seventh'] + $_POST['eighth'];
+$obtained = $_POST['subject1'] * $_POST['credit1'] + $_POST['subject2'] * $_POST['credit2'] + $_POST['subject3'] * $_POST['credit3'] + $_POST['subject4'] * $_POST['credit4'] + $_POST['subject5'] * $_POST['credit5'] + $_POST['subject6'] * $_POST['credit6'];
+$total_credit = $_POST['credit1'] + $_POST['credit2'] + $_POST['credit3'] + $_POST['credit4'] + $_POST['credit5'] + $_POST['credit6'];
 
-echo "<center>Total CGPA: ". $total. "</center>";
-$cgpa = $total/8;
+$cgpa = $obtained / $total_credit;
 
-echo "<br/>";
-echo "<br/>";
-echo "<center>CGPA: ". $cgpa. "</center>";
+echo "<center><b>CGPA: " . $cgpa. "</b></center>";
 
 ?>
